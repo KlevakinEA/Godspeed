@@ -1,0 +1,30 @@
+﻿<Window x:Class="Godspeed.Entry_redaction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Godspeed"
+        mc:Ignorable="d"
+        Title="Entry_redaction" Height="573" Width="407">
+    <Grid>
+        <TextBox Margin="10,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="ArticleBox"/>
+        <TextBox Margin="10,95,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="TitleBox"/>
+        <TextBox Margin="10,149,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="GenreBox"/>
+        <TextBox Margin="10,203,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="DescBox"/>
+        <DatePicker Margin="10,257,10,0" VerticalAlignment="Top" Name="IssuingBox"/>
+        <DatePicker Margin="10,317,10,0" VerticalAlignment="Top" Name="DeliveryBox"/>
+        <ComboBox Margin="10,377,10,0" VerticalAlignment="Top" ItemsSource="{x:Static local:Database.States}" Name="StateBox"/>
+        <TextBlock Margin="10,435,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="ReaderBox"/>
+        <Button Content="Select" Margin="10,456,10,0" VerticalAlignment="Top" Click="SelectClick"/>
+        <Label Content="Article" Margin="10,10,10,0" VerticalAlignment="Top"/>
+        <Label Content="Title" Margin="10,64,10,0" VerticalAlignment="Top"/>
+        <Label Content="Genre" Margin="10,118,10,0" VerticalAlignment="Top"/>
+        <Label Content="Description" Margin="10,172,10,0" VerticalAlignment="Top"/>
+        <Label Content="Issuing date" Margin="10,226,10,0" VerticalAlignment="Top"/>
+        <Label Content="Delivery date" Margin="10,286,10,0" VerticalAlignment="Top"/>
+        <Label Content="State" Margin="10,346,10,0" VerticalAlignment="Top"/>
+        <Label Content="Reader" Margin="10,404,10,0" VerticalAlignment="Top"/>
+        <Button Content="Save" Margin="10,0,10,35" Height="20" VerticalAlignment="Bottom" Click="SaveClick"/>
+        <Button Content="Cancel" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="CancelClick"/>
+    </Grid>
+</Window>

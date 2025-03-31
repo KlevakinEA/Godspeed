@@ -1,0 +1,20 @@
+﻿<Window x:Class="Godspeed.ReaderSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Godspeed"
+        mc:Ignorable="d"
+        Title="ReaderSelection" Height="450" Width="800">
+    <Grid>
+        <ListView d:ItemsSource="{x:Static local:MainWindow.Readers}" Margin="10,10,10,60" IsSynchronizedWithCurrentItem="True" x:Name="ReadersList">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn DisplayMemberBinding="{Binding Full_name}" Header="Full name"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Select" Margin="10,0,10,35" Height="20" VerticalAlignment="Bottom" Click="SelectClick"/>
+        <Button Content="Select none" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="CancelClick"/>
+    </Grid>
+</Window>
