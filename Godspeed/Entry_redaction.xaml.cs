@@ -55,7 +55,7 @@ namespace Godspeed
                 {
                     try
                     {
-                        if (SelectedReader != null) if (Database.AddBook(ArticleBox.Text, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, SelectedReader.ID)) Close();
+                        if (SelectedReader != null) { if (Database.AddBook(ArticleBox.Text, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, SelectedReader.ID)) Close(); }
                         else if (Database.AddBook(ArticleBox.Text, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, null)) Close();
                     }
                     catch { MessageBox.Show("Some error.", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
@@ -68,7 +68,7 @@ namespace Godspeed
                 {
                     try
                     {
-                        if (SelectedReader != null) if (Database.RedactBook(Book.Article, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, SelectedReader.ID)) Close();
+                        if (SelectedReader != null) { if (Database.RedactBook(Book.Article, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, SelectedReader.ID)) Close(); }
                         else if (Database.RedactBook(Book.Article, TitleBox.Text, GenreBox.Text, DescBox.Text, (DateTime)IssuingBox.SelectedDate, (DateTime)DeliveryBox.SelectedDate, (State)StateBox.SelectedItem, null)) Close();
                     }
                     catch { MessageBox.Show("Some error.", "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
